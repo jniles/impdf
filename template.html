@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$TITLE</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <style>
+
+  /* Use border-box for sane box sizing.  Normalize does not include this. */
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing; border-box;
+    box-sizing: border-box;
+  }
+
+  /* WeasyPrint produces strangely sized PDF pages.  Make sure we use Letter */
+  @page {
+    size: Letter;
+    margin: 0.2in 0.44in 0.2in 0.44in;
+  }
+
+  html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  header {
+    text-align: center;
+    background-color: #05538d;
+    color: #FFF;
+    padding: 1em 0;
+  }
+
+  article, footer {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+
+  article > section {
+    float: left;
+    padding: 0.25em;
+    width: 50% !important;
+    max-width: 50%;
+  }
+
+  footer > .footer-item:nth-child(1) {
+    float: left;
+    padding: 0.25em;
+    width: 25%;
+    max-width: 25%;
+  }
+
+  footer > .footer-item:nth-child(2) {
+    float: left;
+    padding: 0.25em;
+    width: 75%;
+    max-width: 75%;
+    font-size: 10px;
+  }
+
+  .section-title {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .section-body {
+    white-space: pre-wrap;
+  }
+
+  .img-responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .page {
+    height: 100%;
+    position: relative;
+    page-break-inside: avoid;
+  }
+
+  .page > footer {
+    position: absolute;
+    bottom: 0;
+    left 0;
+    text-align: center;
+  }
+
+  </style>
+</head>
+<body>
+    <main class="page">
+      <!-- project title -->
+      <header>
+        <h1>$TITLE</h1>
+        <h3>Project Goal: $GOAL</h3>
+      </header>
+
+      <article>
+        <section>
+          <p class="section-title">Project Summary</p>
+          <p class="section-body">$GOAL_TEXT</p>
+          <p class="section-body">$SUMMARY</p>
+        </section>
+
+        <section>
+          <img class="img-responsive" src="$IMG" alt="Project Image"/>
+        </section>
+      </article>
+
+      <article>
+        <section>
+          <p class="section-title">Description</p>
+          <p class="section-body">$DESCRIPTION</p>
+        </section>
+
+        <section>
+          <p class="section-title">Suggested Gifts</p>
+          <p class="section-body">$GIFTS</p>
+        </section>
+      </article>
+
+      <article>
+        $PRAYER
+      </article>
+
+      <!-- contains international ministries disclaimers-->
+      <footer>
+        <div class="footer-item">
+          <a href="https://www.internationalministries.org">
+            <img class="img-responsive" src="https://www.internationalministries.org/wp-content/themes/blankslate/images/im-logo.png" alt="IM Logo" />
+          </a>
+        </div>
+        <div class="footer-item">
+          <i>
+        INTERNATIONAL MINISTRIES is a designated 501(c)(3) organization.
+        Gifts are tax deductible as allowed by the IRS. We pursue faithful
+        stewardship and financial accountability with the gifts entrusted to
+        IM. The donor’s intent will be fulfilled for designated gifts as much
+        possible with the understanding that IM has complete discretion and
+        direction over the usage of gifts designated in support of a project.
+          </i>
+        </div>
+      </footer>
+    </main>
+</body>
+</html>
