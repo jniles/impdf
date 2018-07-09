@@ -104,6 +104,7 @@ venv.bak/
 .mypy_cache/
 
 output/
+v1/output/
 
 # Swap
 [._]*.s[a-v][a-z]
