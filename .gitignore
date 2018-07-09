@@ -103,8 +103,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-output/
 v1/output/
+
+*.pdf
 
 # Swap
 [._]*.s[a-v][a-z]

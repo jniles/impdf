@@ -1,0 +1,28 @@
+@media print {
+	#logo {
+    float: right;
+    margin-bottom: 1em;
+  }
+
+  .post_campaign_psg_label {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  #body > #campaign_details {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    width: 100% !important;
+  }
+
+  #body > #campaign_details > div {
+    page-break-inside: avoid;
+  }
+}
+
+/* WeasyPrint produces strangely sized PDF pages.  Make sure we use Letter */
+@page {
+	size: Letter;
+	margin: 0.2in 0.44in 0.2in 0.44in;
+}
