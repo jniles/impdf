@@ -1,0 +1,28 @@
+{
+  "name": "impdf",
+  "version": "1.0.0",
+  "description": "Turn IM webpages into PDFs",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jniles/impdf.git"
+  },
+  "keywords": [
+    "pdf",
+    "chromium",
+    "im"
+  ],
+  "author": "jniles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jniles/impdf/issues"
+  },
+  "homepage": "https://github.com/jniles/impdf#readme"
+}
